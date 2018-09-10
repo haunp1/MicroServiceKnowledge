@@ -15,8 +15,7 @@ import java.util.stream.Collectors;
  */
 
 @Component("attributeConverter")
-public class
-AttributeConverter implements SuperConverter<AttributeDTO, AttributeEntity> {
+public class AttributeConverter implements SuperConverter<AttributeDTO, AttributeEntity> {
 
     @Autowired
     private ModelMapper modelMapper;

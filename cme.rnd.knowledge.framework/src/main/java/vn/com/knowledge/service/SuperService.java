@@ -1,8 +1,6 @@
 package vn.com.knowledge.service;
 
-import java.util.List;
-
-import vn.com.knowledge.common.ObjResponse;
+import vn.com.knowledge.dto.ResponseModal;
 
 /**
  * @author LocLD1
@@ -11,11 +9,13 @@ import vn.com.knowledge.common.ObjResponse;
  * @param <T>
  */
 public interface SuperService<R, T> {
-	R addOrUpdate(R r);
+    ResponseModal add(R r);
 
-	List<R> findAll();
+    ResponseModal update(R r ,T id);
 
-	R findById(T id);
+	ResponseModal findAll();
 
-	ObjResponse deleteById(T id);
+	ResponseModal findById(T id);
+
+	ResponseModal deleteById(T id);
 }

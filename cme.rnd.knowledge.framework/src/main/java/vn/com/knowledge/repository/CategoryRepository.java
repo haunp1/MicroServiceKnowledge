@@ -12,11 +12,11 @@ import java.util.Optional;
  */
 
 
-public interface CategoryRepository extends JpaRepository<CategoryEntity,Long> {
-    Page<CategoryEntity> findByIsDeleted(Boolean isDeleted, Pageable pageable);
-    Optional<CategoryEntity> findByNameLike(String name);
-    Page<CategoryEntity> findByNameAndIsDeleted(String name,boolean isDeleted, Pageable pageable);
+public interface CategoryRepository extends JpaRepository<CategoryEntity, Long> {
 
+//    Optional<CategoryEntity> findByNameLike(String name);
+//
+//    Page<CategoryEntity> findByNameAndIsDeleted(String name, boolean isDeleted, Pageable pageable);
 
 
 }

@@ -5,7 +5,7 @@ server:
   port: 8081
 spring:
   application:
-    name: knowledge-service  
+    name: knowledge-service
   jpa:
     show-sql: true
     hibernate:
@@ -17,4 +17,3 @@ spring:
     password: 1234
     driver-class-name: com.mysql.jdbc.Driver
       
----

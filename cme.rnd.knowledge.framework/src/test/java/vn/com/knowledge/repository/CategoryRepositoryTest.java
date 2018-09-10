@@ -20,26 +20,26 @@ import static org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTest
 @AutoConfigureTestDatabase(replace = NONE)
 public class CategoryRepositoryTest {
 
-    @Autowired
-    private TestEntityManager entityManager;
-
-    @Autowired
-    private CategoryRepository categoryRepository;
-
-    @Test
-    public void whenFindByName_thenReturnAttributeEntity() {
-        CategoryEntity test = new CategoryEntity();
-        test.setDescription("Test Repository");
-        test.setDeleted(false);
-        test.setName("Test");
-        entityManager.persist(test);
-        entityManager.flush();
-
-        // when
-        CategoryEntity found = categoryRepository.findByNameLike(test.getName()).get();
-
-        // then
-
-        assertThat(found.getName()).isEqualTo(test.getName());
-    }
+//    @Autowired
+//    private TestEntityManager entityManager;
+//
+//    @Autowired
+//    private CategoryRepository categoryRepository;
+//
+//    @Test
+//    public void whenFindByName_thenReturnAttributeEntity() {
+//        CategoryEntity test = new CategoryEntity();
+//        test.setDescription("Test Repository");
+//        test.setDeleted(false);
+//        test.setName("Test");
+//        entityManager.persist(test);
+//        entityManager.flush();
+//
+//        // when
+//        CategoryEntity found = categoryRepository.findByNameLike(test.getName()).get();
+//
+//        // then
+//
+//        assertThat(found.getName()).isEqualTo(test.getName());
+//    }
 }

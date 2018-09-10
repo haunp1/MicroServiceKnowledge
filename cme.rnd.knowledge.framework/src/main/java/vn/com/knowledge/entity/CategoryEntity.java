@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 /**
  * @author NhanVT3
@@ -12,24 +13,19 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "category")
-public class CategoryEntity extends BaseEntity {
+public class CategoryEntity extends BaseEntity implements Serializable {
 
+    private static final long serialVersionUID = 6629562377153389544L;
     @Size(min = 5, max = 100)
     @Column(name = "description")
     private String description;
 
     @Size(max = 50, min = 5)
-    @Column(name = "name",unique = true)
+    @Column(name = "name", unique = true)
     private String name;
 
 
-
-    @Column(name = "isDeleted", columnDefinition = "tinyint(1) default 1")
-    private boolean isDeleted;
-
-
     /**
-     *
      * @return name
      */
     public String getName() {
@@ -37,7 +33,6 @@ public class CategoryEntity extends BaseEntity {
     }
 
     /**
-     *
      * @param name
      */
     public void setName(String name) {
@@ -45,7 +40,6 @@ public class CategoryEntity extends BaseEntity {
     }
 
     /**
-     *
      * @return description
      */
     public String getDescription() {
@@ -53,30 +47,11 @@ public class CategoryEntity extends BaseEntity {
     }
 
     /**
-     *
      * @param description
      */
     public void setDescription(String description) {
         this.description = description;
     }
-
-    /**
-     *
-     * @return isDeleted
-     */
-    public boolean isDeleted() {
-        return isDeleted;
-    }
-
-    /**
-     *
-     * @param deleted
-     */
-    public void setDeleted(boolean deleted) {
-        isDeleted = deleted;
-    }
-
-
 
 
 }

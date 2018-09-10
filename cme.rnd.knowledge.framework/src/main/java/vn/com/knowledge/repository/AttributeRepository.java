@@ -15,4 +15,5 @@ public interface AttributeRepository extends JpaRepository<AttributeEntity, Long
     Page<AttributeEntity> findByIsDeleted(Boolean isDeleted, Pageable pageable);
     Optional<AttributeEntity> findByName(String name);
     Page<AttributeEntity> findAllByIsDeletedAndNameContaining(Boolean isDeleted, String name, Pageable pageable);
+    Page<AttributeEntity> findByNameContaining(String name, Pageable pageable);
 }

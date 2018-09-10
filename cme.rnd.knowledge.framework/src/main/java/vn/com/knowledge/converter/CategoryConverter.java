@@ -40,7 +40,10 @@ public class CategoryConverter implements SuperConverter<CategoryDTO, CategoryEn
      */
     @Override
     public List<CategoryEntity> convertDTOsToEntities(List<CategoryDTO> dtos) {
-        return null;
+        if (dtos.isEmpty()) {
+            return new ArrayList<>();
+        }
+        return dtos.stream().map(dto -> convertToEntity(dto)).collect(Collectors.toList());
     }
 
     /**

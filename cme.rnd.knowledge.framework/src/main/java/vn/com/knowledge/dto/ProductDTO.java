@@ -1,44 +1,35 @@
 package vn.com.knowledge.dto;
 
 /**
- * @author NhanVT3
+ * @author ThanhVQ
  */
-
-public class CategoryDTO extends BaseDTO {
+public class ProductDTO extends BaseDTO {
 
     private String name;
-
     private String description;
+    private boolean isDeleted;
 
-
-    /**
-     * @return  the name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name
-     *              the name to set
-     */
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * @return description
-     */
     public String getDescription() {
         return description;
     }
 
-    /**
-     * @param description
-     */
     public void setDescription(String description) {
         this.description = description;
     }
 
+    public boolean isDeleted() {
+        return isDeleted;
+    }
 
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
+    }
 }

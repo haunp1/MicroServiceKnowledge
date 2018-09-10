@@ -13,5 +13,5 @@ public interface AttributeService extends SuperService<AttributeDTO, Long> {
     List<AttributeDTO> findAllCheckIsDeleted(boolean isDeleted, int offSet, int limit, String soft);
     AttributeDTO findByName(String name);
     List<AttributeDTO> findAllCheckIsDeletedAndNameContaining(boolean isDeleted, String name, int offSet, int limit, String soft);
-    ObjResponse add(AttributeDTO attributeDTO);
+//    ObjResponse add(AttributeDTO attributeDTO);
 }
